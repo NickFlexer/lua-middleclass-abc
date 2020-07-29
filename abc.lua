@@ -20,6 +20,10 @@ function ABC:set_abstract_methods(cls)
             end
         end
     end
+
+    if not next(self.abstractmethods, nil) then
+        error("No abstract methods found! All abstract methods must return self.abstractmethod")
+    end
 end
 
 function ABC:check_abstract_methods(cls)
