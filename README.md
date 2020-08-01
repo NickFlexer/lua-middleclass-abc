@@ -13,6 +13,7 @@ metod ```ABC:check_abstract_methods(cls)``` check all methods of subclass. If so
 local class = require "middleclass"
 local ABC = require "abc"
 
+
 -- Defines an abstract base class
 local AbstractClass = class("AbstractClass", ABC)
 
@@ -28,6 +29,7 @@ end
 function AbstractClass:second_method()
     return self.abstractmethod
 end
+
 
 -- Define class inheriting from our abstract class
 local CorrectConcreteClass = class("CorrectConcreteClass", AbstractClass)
