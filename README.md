@@ -4,8 +4,10 @@ Lua abstract base class implementation for middleclass
 ### Overview
 lua-middlecalss-abc is just an middleclass class. 
 To mark methods as abstract it must return ```self.abstractmethod```
-method ```ABC:set_abstract_methods(cls)``` set all abstract methods in abstract base class. You must mark one or more methods like abstract
-metod ```ABC:check_abstract_methods(cls)``` check all methods of subclass. If some abstract methods not implemented ABC raise "Can't instantiate abstract class" error
+
+Method ```ABC:set_abstract_methods(cls)``` set all abstract methods in abstract base class. You must mark one or more methods like abstract
+
+Metod ```ABC:check_abstract_methods(cls)``` check all methods of subclass. If some abstract methods not implemented ABC raise "Can't instantiate abstract class" error
 
 ### Simple example 
 
