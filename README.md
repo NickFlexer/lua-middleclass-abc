@@ -2,7 +2,7 @@
 Lua abstract base class implementation for middleclass 
 
 ### Overview
-lua-middlecalss-abc is just an middleclass class. 
+lua-middlecalss-abc is just an [middleclass](https://github.com/kikito/middleclass) class. 
 To mark methods as abstract it must return ```self.abstractmethod```
 
 Method ```ABC:set_abstract_methods(cls)``` set all abstract methods in abstract base class. You must mark one or more methods like abstract
