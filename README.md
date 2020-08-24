@@ -1,13 +1,13 @@
 # lua-middlecalss-abc
-Lua abstract base class implementation for middleclass 
+Lua abstract base class implementation for [middleclass](https://github.com/kikito/middleclass) 
 
 ### Overview
-lua-middlecalss-abc is just an [middleclass](https://github.com/kikito/middleclass) class. 
+lua-middlecalss-abc is just an middleclass class. 
 To mark methods as abstract it must return ```self.abstractmethod```
 
-Method ```ABC:set_abstract_methods(cls)``` set all abstract methods in abstract base class. You must mark one or more methods like abstract
+Method ```:set_abstract_methods(cls)``` set all abstract methods in abstract base class. You must mark one or more methods like abstract
 
-Metod ```ABC:check_abstract_methods(cls)``` check all methods of subclass. If some abstract methods not implemented ABC raise "Can't instantiate abstract class" error
+Metod ```:check_abstract_methods(cls)``` check all methods of subclass. If some abstract methods not implemented ABC raise "Can't instantiate abstract class" error
 
 ### Simple example 
 
@@ -48,8 +48,34 @@ end
 function CorrectConcreteClass:second_method()
     print("I'm correct second method!")
 end
+
+-- Define class inheriting from our abstract class without all methods implementation
+local IncorrectConcreteClass = class("IncorrectConcreteClass", AbstractClass)
+
+function IncorrectConcreteClass:initialize()
+    -- call superclass constructor
+    AbstractClass.initialize(self)
+    -- check that all abstract methods is overridden
+    self:check_abstract_methods(IncorrectConcreteClass)
+end
+
+function IncorrectConcreteClass:first_method()
+    print("I'm correct first method!")
+end
+
+
+-- Execution:
+local c = CorrectConcreteClass()
+c:first_method()
+c:second_method()
+-- Returns:
+-- I'm correct first method of instance of class CorrectConcreteClass!
+-- I'm correct second method of instance of class CorrectConcreteClass!
+
+local ic = IncorrectConcreteClass()
+-- Raise error:
+-- Can't instantiate abstract class IncorrectConcreteClass with abstract methods [ second_method,]
 ```
 
 ### Tests
 lua-middlecalss-abc uses [busted](http://olivinelabs.com/busted/) for testing 
-

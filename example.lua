@@ -39,11 +39,11 @@ function CorrectConcreteClass:initialize()
 end
 
 function CorrectConcreteClass:first_method()
-    print("I'm correct first method!")
+    print("I'm correct first method of " .. tostring(self) .. "!")
 end
 
 function CorrectConcreteClass:second_method()
-    print("I'm correct second method!")
+    print("I'm correct second method of " .. tostring(self) .. "!")
 end
 
 
@@ -58,11 +58,11 @@ function IncorrectConcreteClass:initialize()
 end
 
 function IncorrectConcreteClass:first_method()
-    print("I'm correct first method!")
+    print("I'm correct first method of " .. tostring(self) .. "!")
 end
 
 
-function main()
+local function main()
     -- create instance of correct class
     local correct_concrete_class = CorrectConcreteClass()
     correct_concrete_class:first_method()

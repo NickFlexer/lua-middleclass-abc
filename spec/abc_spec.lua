@@ -39,7 +39,7 @@ describe("ABC", function ()
         end
 
         function B:a()
-            -- body
+            return tostring(self)
         end
 
         assert.has_no.errors(function () B() end)
