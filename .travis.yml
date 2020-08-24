@@ -25,6 +25,6 @@ script:
   - busted --verbose --coverage
 
 after_success:
-  - TRAVIS_BUILD_DIR
+  - echo $TRAVIS_BUILD_DIR
   - luacov-coveralls -i abc.lua -e spec -e $TRAVIS_BUILD_DIR/lua_install
   
