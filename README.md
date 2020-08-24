@@ -1,4 +1,6 @@
 # lua-middlecalss-abc
+[![Build Status](https://travis-ci.org/NickFlexer/lua-middlecalss-abc.svg?branch=master)](https://travis-ci.org/NickFlexer/lua-middlecalss-abc) [![Coverage Status](https://coveralls.io/repos/github/NickFlexer/lua-middlecalss-abc/badge.svg)](https://coveralls.io/github/NickFlexer/lua-middlecalss-abc)
+
 Lua abstract base class implementation for [middleclass](https://github.com/kikito/middleclass) 
 
 ### Overview
