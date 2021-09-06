@@ -1,10 +1,10 @@
-# lua-middlecalss-abc
+# lua-middleclass-abc
 [![Build Status](https://travis-ci.org/NickFlexer/lua-middlecalss-abc.svg?branch=master)](https://travis-ci.org/NickFlexer/lua-middlecalss-abc) [![Coverage Status](https://coveralls.io/repos/github/NickFlexer/lua-middlecalss-abc/badge.svg)](https://coveralls.io/github/NickFlexer/lua-middlecalss-abc)
 
 Lua abstract base class implementation for [middleclass](https://github.com/kikito/middleclass) 
 
 ### Overview
-lua-middlecalss-abc is just an middleclass class. 
+lua-middleclass-abc is just an middleclass class. 
 To mark methods as abstract it must return ```self.abstractmethod```
 
 Method ```:set_abstract_methods(cls)``` set all abstract methods in abstract base class. You must mark one or more methods like abstract
@@ -80,4 +80,4 @@ local ic = IncorrectConcreteClass()
 ```
 
 ### Tests
-lua-middlecalss-abc uses [busted](http://olivinelabs.com/busted/) for testing 
+lua-middleclass-abc uses [busted](http://olivinelabs.com/busted/) for testing 
